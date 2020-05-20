@@ -3,172 +3,166 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-      crossorigin="anonymous"
-    ></script>
   </head>
   <body>
     <!--src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"-->
-
-    <header class="header">
-      <h1 id="title" class="title">Guest Survey</h1>
-      <p id="description" class="description">
-        Thank you for staying at our inn! Please take a minute to answer this
-        quick survey to help us improve our services.
-      </p>
-    </header>
-
-    <form id="survey-form" class="form">
-      <div class="group">
-        <label id="name-label" class="label" for="name">
-          Name:
-        </label>
-        <input
-          id="name"
-          class="input-text"
-          name="name"
-          type="text"
-          placeholder="Enter your name"
-          required
-        />
-      </div>
-      <div class="group">
-        <label id="email-label" class="label" for="email">
-          Email:
-        </label>
-        <input
-          id="email"
-          class="input-text"
-          name="email"
-          type="email"
-          placeholder="Enter your email"
-          required
-        />
-      </div>
-      <div class="group">
-        <label id="number-label" class="label" for="number">
-          From 1-10, how happy are you with the service provided?
-        </label>
-        <input
-          for="number"
-          name="number"
-          type="number"
-          class="input"
-          min="1"
-          max="10"
-          placeholder="Rate"
-          required
-        />
-      </div>
-      <div class="group">
-        <p>What were the reasons of your travel?</p>
-        <select id="dropdown" class="input" name="travel-reason" required>
-          <option disabled selected value>
-            Select your answer
-          </option>
-          <option value="work">
-            Work Trip
-          </option>
-          <option value="family">
-            Visiting Family
-          </option>
-          <option value="vacations">
-            Vacations
-          </option>
-          <option value="other">
-            Other
-          </option>
-        </select>
-      </div>
-      <div class="group">
-        <p class="label">
-          Would you recommend our Inn to a friend?
+    <div class="white-container">
+      <header class="header">
+        <h1 id="title" class="title">Guest Survey</h1>
+        <p id="description" class="description">
+          Thank you for staying at our inn! Please take a minute to answer this
+          quick survey to help us improve our services.
         </p>
-        <label>
+      </header>
+
+      <form id="survey-form" class="container">
+        <div class="group">
+          <label id="name-label" class="label" for="name">
+            Name:
+          </label>
           <input
-            name="recommend"
-            value="definitely"
-            type="radio"
-            class="input-radio"
-            checked
+            id="name"
+            class="input-text"
+            name="name"
+            type="text"
+            placeholder="Enter your name"
+            required
           />
-          Definitely
-        </label>
-        <label>
+        </div>
+        <div class="group">
+          <label id="email-label" class="label" for="email">
+            Email:
+          </label>
           <input
-            name="recommend"
-            value="maybe"
-            type="radio"
-            class="input-radio"
+            id="email"
+            class="input-text"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            required
           />
-          Maybe
-        </label>
-        <label>
+        </div>
+        <div class="group">
+          <label id="number-label" class="label-inline" for="number">
+            From 1-10, how happy are you with the service provided?
+          </label>
           <input
-            name="recommend"
-            value="not-really"
-            type="radio"
-            class="input-radio"
+            for="number"
+            id="number"
+            name="number"
+            type="number"
+            class="input"
+            min="1"
+            max="10"
+            placeholder="Rate"
+            required
           />
-          Not really
-        </label>
-      </div>
-      <div class="group">
-        <p class="label">
-          Which amenities did you use?
-          <span class="note">(Check all that apply)</span>
-        </p>
-        <label>
-          <input name="amenities" value="room-service" type="checkbox" />
-          Room Service
-        </label>
-        <label>
-          <input name="amenities" value="pool" type="checkbox" />
-          Pool
-        </label>
-        <label>
-          <input name="amenities" value="wifi" type="checkbox" />
-          WiFi
-        </label>
-        <label>
-          <input name="amenities" value="laundry-service" type="checkbox" />
-          Laundry Service
-        </label>
-        <label>
-          <input
-            name="amenities"
-            value="individual-kitchenette"
-            type="checkbox"
-          />
-          Individual kitchenette
-        </label>
-        <label>
-          <input name="amenities" value="transport" type="checkbox" />
-          Transport
-        </label>
-      </div>
-      <div class="form-group">
-        <p>Any comments or suggestions?</p>
-        <textarea
-          id="comments"
-          class="input-textarea"
-          name="comment"
-          placeholder="Enter your comment here..."
-        >
-        </textarea>
-      </div>
-      <div class="form-group">
-        <button type="submit" id="submit" class="submit-button">Submit</button>
-      </div>
-    </form>
+        </div>
+        <div class="group">
+          <p class="label">What were the reasons of your travel?</p>
+          <select id="dropdown" class="input" name="travel-reason" required>
+            <option disabled selected value>
+              Select your answer
+            </option>
+            <option value="work">
+              Work Trip
+            </option>
+            <option value="family">
+              Visiting Family
+            </option>
+            <option value="vacations">
+              Vacations
+            </option>
+            <option value="other">
+              Other
+            </option>
+          </select>
+        </div>
+        <div class="group">
+          <p class="label.label-inline">
+            Would you recommend our Inn to a friend?
+          </p>
+          <label>
+            <input
+              name="recommend"
+              value="definitely"
+              type="radio"
+              class="input-radio"
+              checked
+            />
+            Definitely
+          </label>
+          <label>
+            <input
+              name="recommend"
+              value="maybe"
+              type="radio"
+              class="input-radio"
+            />
+            Maybe
+          </label>
+          <label>
+            <input
+              name="recommend"
+              value="not-really"
+              type="radio"
+              class="input-radio"
+            />
+            Not really
+          </label>
+        </div>
+        <div class="group">
+          <p class="label-inline">
+            Which amenities did you use?
+            <span class="note">(Check all that apply)</span>
+          </p>
+          <label>
+            <input name="amenities" value="room-service" type="checkbox" />
+            Room Service
+          </label>
+          <label>
+            <input name="amenities" value="pool" type="checkbox" />
+            Pool
+          </label>
+          <label>
+            <input name="amenities" value="wifi" type="checkbox" />
+            WiFi
+          </label>
+          <label>
+            <input name="amenities" value="laundry-service" type="checkbox" />
+            Laundry Service
+          </label>
+          <label>
+            <input
+              name="amenities"
+              value="individual-kitchenette"
+              type="checkbox"
+            />
+            Individual kitchenette
+          </label>
+          <label>
+            <input name="amenities" value="transport" type="checkbox" />
+            Transport
+          </label>
+        </div>
+        <div class="form-group">
+          <p class="label-inline">
+            Any comments or suggestions?
+          </p>
+          <textarea
+            id="comments"
+            class="input-textarea"
+            name="comment"
+            placeholder="Enter your comment here..."
+          >
+          </textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" id="submit" class="button">Submit</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
